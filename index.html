@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script>src="/js/script.js"</script>
     <link rel="stylesheet" href="css/style.css">
     <title>
         Website Konversi Suhu
     </title>
+    
 </head>
 <body>
     <header>
@@ -29,7 +30,39 @@
         </section>
         <section class="grid-container">
             <section class="asidepart">
-                You wait a moment, Doctor. Let's get it right. I've got a few things to say to you. Basic stuff first. <b>Never be cruel, never be cowardly</b>, and never, ever eat pears! <b>Remember, hate is always foolish, and love is always wise. Always try to be nice, but never fail to be kind.</b> Oh, and you mustn't tell anyone your name. No one would understand it, anyway. Except, ah! (collapses) Except children. Children can hear it sometimes. If their hearts are in the right place, and the stars are too, children can hear your name. Argh! But nobody else. Nobody else, ever. <b>Laugh hard, run fast, be kind.</b> Doctor, I let you go.
+                <table height="100%">
+                    <tr height="40%">
+                        <td>
+                            <div class="statuspanel">
+                                <label id="status">Unearthly Heat</label>
+                            </div>
+                            <div class="upper-sidepanel">
+                                <label id="result">0</label>
+                            </div>                            
+                        </td>
+                    </tr>
+                    <tr rowspan="1" height="60%">
+                        <td>
+                            <h1>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
+                            <hr>
+                            <article>
+                                <p>Suhu <span class="formula">S</span> dalam derajat Fahrenheit (&deg;F)</p>
+            
+                                <div class="formula">
+                                    S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 9/5) + 32
+                                </div>
+                                <div>
+                                    atau
+                                </div>
+                
+                                <div class="formula">
+                                    S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1,8) + 32
+                                </div>
+                            </article>
+                        </td>
+                    </tr>
+                </table>
+                
             </section>
             
             <section class="section-input">
@@ -38,15 +71,15 @@
                         <label for="konversi-input">Celcius (&deg;C)</label>
                     </div>
                     <div>
-                        <textarea id="input">Inputkan suhu yang</textarea>
+                        <textarea id="input"></textarea>
                     </div>
                 
                     <div>
-                        <table border=0 width=100%>
+                        <table border=0 width="100%">
                             <tr>
-                                <td><button>Konversi</button></td>
-                                <td><button>Reset</button></td>
-                                <td><button>Reverse</button></td>
+                                <td><button onclick="alert(convert())">Konversi</button></td>
+                                <td><button type="reset">Reset</button></td>
+                                <td><button onclick="reverse()">Reverse</button></td>
                             </tr>
                         </table>                  
                         </div>
@@ -72,14 +105,7 @@
                 </div>
             </section>
         </section>
-        
 
-        <section>
-            <header>
-                <h1>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
-                <hr>
-            </header>
-        </section>
     </main>
     
 
