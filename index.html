@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>src="/js/script.js"</script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
     <title>
         Website Konversi Suhu
     </title>
@@ -30,20 +30,22 @@
         </section>
         <section class="grid-container">
             <section class="asidepart">
-                <table height="100%">
+                <table height="100%" width="100%">
                     <tr height="40%">
                         <td>
                             <div class="statuspanel">
                                 <label id="status">Unearthly Heat</label>
                             </div>
-                            <div class="upper-sidepanel">
-                                <label id="result">0</label>
+                            <div class="upper-sidepanel" id="result-color">
+                                <label id="result-sidepanel">0</label>
                             </div>                            
                         </td>
                     </tr>
                     <tr rowspan="1" height="60%">
                         <td>
-                            <h1>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
+                            <div class="infopanel">
+                                <h1>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
+                            </div>
                             <hr>
                             <article>
                                 <p>Suhu <span class="formula">S</span> dalam derajat Fahrenheit (&deg;F)</p>
@@ -66,18 +68,18 @@
             </section>
             
             <section class="section-input">
-                <form>
+                <form onsubmit="return false">
                     <div>
-                        <label for="konversi-input">Celcius (&deg;C)</label>
+                        <label id="label-input" type="string">Celcius (&deg;C)</label>
                     </div>
                     <div>
-                        <textarea id="input"></textarea>
+                        <textarea id="input" type="number"></textarea>
                     </div>
                 
                     <div>
                         <table border=0 width="100%">
                             <tr>
-                                <td><button onclick="alert(convert())">Konversi</button></td>
+                                <td><button onclick="convert()">Konversi</button></td>
                                 <td><button type="reset">Reset</button></td>
                                 <td><button onclick="reverse()">Reverse</button></td>
                             </tr>
@@ -89,10 +91,10 @@
             
             <section class="section-input">
                 <div>
-                    <label>Fahrenheit (&deg;F)</label>
+                    <label id="label-output" type="string">Fahrenheit (&deg;F)</label>
                 </div>
                 <div>
-                    <textarea id="result" readonly></textarea>
+                    <textarea id="result" type="number"></textarea>
                 </div>
             </section>
             
@@ -100,8 +102,7 @@
                 <div>
                     <label>Cara Kalkulasi</label>
                 </div>
-                <div>
-                    <textarea id="calculate-detail"></textarea>
+                <div id="calculate-detail" class="formula">
                 </div>
             </section>
         </section>
