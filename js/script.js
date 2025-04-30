@@ -23,7 +23,7 @@ function convert(){
         input = document.getElementById("input").value;
         output = (input - 32)/1.8;
         output = Math.round(output).toFixed(1);
-        document.getElementById("result-sidepanel").innerHTML = output;
+        document.getElementById("result-sidepanel").innerHTML = output+"&deg;F";
         document.getElementById("result").innerHTML = output;
         document.getElementById("calculate-detail").innerHTML = "S<sub>(&deg;C)</sub> = (S<sub>(&deg;F)</sub> - 32) / 1.8<br>"+
                                                                 "S<sub>(&deg;C)</sub> = ("+input+"- 32) / 1.8<br>"+
@@ -36,7 +36,7 @@ function convert(){
         input = document.getElementById("input").value;
         output = (input * 1.8)+32;
         output = Math.round(output).toFixed(1);
-        document.getElementById("result-sidepanel").innerHTML = output;
+        document.getElementById("result-sidepanel").innerHTML = output+"&deg;C";
         document.getElementById("result").innerHTML = output;
         document.getElementById("calculate-detail").innerHTML = "S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1,8) + 32 <br>"+
                                                                 "S<sub>(&deg;F)</sub> = ("+input+"&times; 1,8) + 32<br>"+
