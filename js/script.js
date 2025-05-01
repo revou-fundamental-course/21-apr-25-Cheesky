@@ -1,25 +1,33 @@
 var input = 0;
 var output = 0;
 var opsi = false;
-document.getElementById("label-input").innerHTML = "Celcius (&deg;C)";
+document.getElementById("label-input").innerHTML = "Celsius (&deg;C)";
 document.getElementById("label-output").innerHTML = "Fahrenheit (&deg;F)";
 
 function reverse(){
     opsi = !opsi;
     if(opsi == true){
         document.getElementById("label-input").innerHTML = "Fahrenheit (&deg;F)";
-        document.getElementById("label-output").innerHTML = "Celcius (&deg;C)";
+        document.getElementById("label-output").innerHTML = "Celsius (&deg;C)";
+        document.getElementById("header-cara").innerHTML ="<h1>Cara Konversi dari Fahrenheit (&deg;F) ke Celsius (&deg;C)<h1>";
+        document.getElementById("suhu-cara").innerHTML ="Celsius (&deg;C)</p>";
+        document.getElementById("cara-1").innerHTML = "S<sub>(&deg;C)</sub> = (S<sub>(&deg;F)</sub> &times; 9/5) + 32";
+        document.getElementById("cara-2").innerHTML = "S<sub>(&deg;C)</sub> = (S<sub>(&deg;F)</sub> &times; 1,8) + 32";
     }
     else{
-        document.getElementById("label-input").innerHTML = "Celcius (&deg;C)";
+        document.getElementById("label-input").innerHTML = "Celsius (&deg;C)";
         document.getElementById("label-output").innerHTML = "Fahrenheit (&deg;F)";
+        document.getElementById("header-cara").innerHTML ="<h1>Cara Konversi dari Celsius (&deg;C) ke Fahrenheit (&deg;F)<h1>";
+        document.getElementById("suhu-cara").innerHTML ="Fahrenheit (&deg;F)</p>";
+        document.getElementById("cara-1").innerHTML = "S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 9/5) + 32";
+        document.getElementById("cara-2").innerHTML = "S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1,8) + 32";
     }
 
     return convert();
 }
 function convert(){
     if(opsi === true){
-        // Fahrenheit to Celcius
+        // Fahrenheit to Celsius
         input = document.getElementById("input").value;
         output = (input - 32)/1.8;
         output = Math.round(output).toFixed(1);
@@ -32,7 +40,7 @@ function convert(){
         return tempcolor(input)
     }
     else{
-        // Celcius to Fahrenheit
+        // Celsius to Fahrenheit
         input = document.getElementById("input").value;
         output = (input * 1.8)+32;
         output = Math.round(output).toFixed(1);

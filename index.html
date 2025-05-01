@@ -43,21 +43,21 @@
                     </tr>
                     <tr rowspan="1" height="60%">
                         <td>
-                            <div class="infopanel">
-                                <h1>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
+                            <div class="infopanel" id="header-cara">
+                                <h1>Cara Konversi dari Celsius (&deg;C) ke Fahrenheit (&deg;F)</h1>
                             </div>
                             <hr>
                             <article>
-                                <p>Suhu <span class="formula">S</span> dalam derajat Fahrenheit (&deg;F)</p>
+                                <p>Suhu <span class="formula">S</span> dalam derajat <span id="suhu-cara">Fahrenheit (&deg;F)</span></p>
             
-                                <div class="formula">
+                                <div class="formula" id="cara-1">
                                     S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 9/5) + 32
                                 </div>
                                 <div>
                                     atau
                                 </div>
                 
-                                <div class="formula">
+                                <div class="formula" id="cara-2">
                                     S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1,8) + 32
                                 </div>
                             </article>
@@ -70,7 +70,7 @@
             <section class="section-input">
                 <form onsubmit="return false">
                     <div>
-                        <label id="label-input" type="string">Celcius (&deg;C)</label>
+                        <label id="label-input" type="string">Celsius (&deg;C)</label>
                     </div>
                     <div>
                         <textarea id="input" type="number"></textarea>
